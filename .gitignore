@@ -8,6 +8,7 @@ lerna-debug.log*
 
 # Project specific
 docs/
+EIN/
 
 # Dependency directories
 node_modules/
