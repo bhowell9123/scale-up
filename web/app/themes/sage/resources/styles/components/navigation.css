@@ -1,0 +1,116 @@
+/* Navigation Styles */
+
+/* Main Navigation */
+.nav-primary {
+  @apply relative z-50;
+}
+
+.nav-menu {
+  @apply list-none p-0 m-0;
+}
+
+.nav-menu li {
+  @apply relative;
+}
+
+.nav-menu a, .nav-link {
+  @apply text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200;
+}
+
+.nav-menu .current-menu-item > a {
+  @apply text-primary-500 font-semibold;
+}
+
+/* Dropdown Menus */
+.nav-menu .sub-menu {
+  @apply absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 opacity-0 invisible transition-all duration-200 transform -translate-y-2 z-50;
+}
+
+.nav-menu li:hover > .sub-menu {
+  @apply opacity-100 visible translate-y-0;
+}
+
+.nav-menu .sub-menu li {
+  @apply block w-full;
+}
+
+.nav-menu .sub-menu a {
+  @apply block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-primary-500;
+}
+
+/* Mobile Navigation */
+.hamburger {
+  @apply w-10 h-10 flex flex-col justify-center items-center relative;
+}
+
+.hamburger-line {
+  @apply w-6 h-0.5 bg-gray-700 transition-all duration-300 mb-1 last:mb-0;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  @apply transform rotate-45 translate-y-2;
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  @apply opacity-0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  @apply transform -rotate-45 -translate-y-2;
+}
+
+.nav-menu-mobile {
+  @apply fixed top-0 right-0 h-full w-4/5 bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-40 lg:hidden;
+}
+
+.nav-menu-mobile.active {
+  @apply translate-x-0;
+}
+
+.nav-menu-mobile-list {
+  @apply list-none p-0 m-0 space-y-4;
+}
+
+.nav-menu-mobile-list a {
+  @apply block text-xl font-medium text-gray-800 py-2 border-b border-gray-100;
+}
+
+.nav-menu-mobile-list .current-menu-item > a {
+  @apply text-primary-500;
+}
+
+/* Footer Navigation */
+.footer-menu {
+  @apply list-none p-0 m-0;
+}
+
+.footer-menu a {
+  @apply text-gray-400 hover:text-white transition-colors duration-200;
+}
+
+.footer-menu .current-menu-item > a {
+  @apply text-white;
+}
+
+/* Utility Navigation */
+.utility-nav {
+  @apply flex items-center space-x-4;
+}
+
+.utility-nav a {
+  @apply text-sm text-gray-500 hover:text-primary-500;
+}
+
+/* Scroll Behavior */
+.nav-scrolled {
+  @apply bg-white shadow-md;
+}
+
+body.menu-open {
+  @apply overflow-hidden;
+}
+
+/* Mobile menu backdrop */
+.menu-backdrop {
+  @apply fixed inset-0 bg-black bg-opacity-50 z-30;
+}

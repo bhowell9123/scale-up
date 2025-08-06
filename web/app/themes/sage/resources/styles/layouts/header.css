@@ -1,0 +1,118 @@
+/* Header Styles */
+
+.banner {
+  @apply w-full;
+}
+
+/* Sticky Header */
+.banner.sticky {
+  @apply fixed top-0 left-0 right-0 bg-white shadow-md z-50 transition-all duration-300;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Header Layouts */
+.header-layout-default {
+  @apply py-4;
+}
+
+.header-layout-centered {
+  @apply py-4 text-center;
+}
+
+.header-layout-centered .brand {
+  @apply mx-auto mb-4;
+}
+
+.header-layout-centered .nav-menu {
+  @apply justify-center;
+}
+
+.header-layout-split {
+  @apply py-4;
+}
+
+.header-layout-split .container {
+  @apply grid grid-cols-3 items-center;
+}
+
+.header-layout-split .brand {
+  @apply col-start-2 mx-auto;
+}
+
+.header-layout-split .nav-left {
+  @apply justify-start;
+}
+
+.header-layout-split .nav-right {
+  @apply justify-end;
+}
+
+/* Header Elements */
+.brand {
+  @apply flex items-center;
+}
+
+.brand img {
+  @apply h-10;
+}
+
+.brand-text {
+  @apply text-xl font-bold text-gray-900 ml-2;
+}
+
+/* Header Variations */
+.header-transparent {
+  @apply absolute top-0 left-0 right-0 bg-transparent z-50;
+}
+
+.header-transparent .nav-menu a {
+  @apply text-white;
+}
+
+.header-transparent .hamburger span {
+  @apply bg-white;
+}
+
+.header-transparent.scrolled {
+  @apply fixed bg-white shadow-md;
+}
+
+.header-transparent.scrolled .nav-menu a {
+  @apply text-gray-700;
+}
+
+.header-transparent.scrolled .hamburger span {
+  @apply bg-gray-800;
+}
+
+.header-dark {
+  @apply bg-gray-900 text-white;
+}
+
+.header-dark .nav-menu a {
+  @apply text-gray-300 hover:text-white;
+}
+
+.header-dark .hamburger span {
+  @apply bg-white;
+}
+
+/* Header Responsive */
+@screen lg {
+  .header-layout-centered .brand {
+    @apply mb-0;
+  }
+  
+  .header-layout-centered .container {
+    @apply flex flex-col;
+  }
+}

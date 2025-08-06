@@ -1,0 +1,128 @@
+/* Video Player Styles */
+
+.video-player {
+  @apply relative w-full h-full overflow-hidden;
+}
+
+.video-player img {
+  @apply w-full h-full object-cover transition-transform duration-300;
+}
+
+.video-player:hover img {
+  @apply transform scale-105;
+}
+
+.play-button {
+  @apply cursor-pointer transition-opacity duration-300;
+}
+
+.video-player:hover .play-button {
+  @apply opacity-90;
+}
+
+.play-button-icon {
+  @apply w-20 h-20 bg-primary-500 bg-opacity-80 rounded-full flex items-center justify-center transition-all duration-300;
+}
+
+.play-button:hover .play-button-icon {
+  @apply bg-opacity-100 transform scale-110;
+}
+
+/* Video Modal */
+.video-modal {
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75 opacity-0 invisible transition-all duration-300;
+}
+
+.video-modal.active {
+  @apply opacity-100 visible;
+}
+
+.video-modal-content {
+  @apply relative w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden;
+}
+
+.video-modal-close {
+  @apply absolute top-4 right-4 w-10 h-10 rounded-full bg-black bg-opacity-50 text-white flex items-center justify-center cursor-pointer z-10 transition-all duration-200;
+}
+
+.video-modal-close:hover {
+  @apply bg-opacity-80;
+}
+
+/* Video Embed */
+.video-embed {
+  @apply relative w-full;
+}
+
+.video-embed::before {
+  content: "";
+  @apply block pb-[56.25%]; /* 16:9 Aspect Ratio */
+}
+
+.video-embed iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* Video Controls */
+.video-controls {
+  @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 transition-opacity duration-300;
+}
+
+.video-player:hover .video-controls {
+  @apply opacity-100;
+}
+
+.video-progress {
+  @apply w-full h-1 bg-gray-600 rounded-full mb-4 cursor-pointer;
+}
+
+.video-progress-bar {
+  @apply h-full bg-primary-500 rounded-full;
+}
+
+.video-buttons {
+  @apply flex items-center justify-between text-white;
+}
+
+.video-play-pause,
+.video-mute,
+.video-fullscreen {
+  @apply p-2 rounded-full hover:bg-white hover:bg-opacity-20;
+}
+
+.video-time {
+  @apply text-sm text-white;
+}
+
+/* Video Playlist */
+.video-playlist {
+  @apply mt-6 space-y-4;
+}
+
+.video-playlist-item {
+  @apply flex items-center p-3 rounded-lg cursor-pointer transition-all duration-200;
+}
+
+.video-playlist-item:hover {
+  @apply bg-gray-100;
+}
+
+.video-playlist-item.active {
+  @apply bg-primary-100;
+}
+
+.video-playlist-thumbnail {
+  @apply w-24 h-16 rounded overflow-hidden flex-shrink-0 mr-4;
+}
+
+.video-playlist-info {
+  @apply flex-grow;
+}
+
+.video-playlist-title {
+  @apply font-medium text-gray-900 mb-1;
+}
+
+.video-playlist-duration {
+  @apply text-sm text-gray-500;
+}

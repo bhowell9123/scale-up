@@ -1,0 +1,136 @@
+/* Card Styles */
+
+.card {
+  @apply bg-white rounded-lg shadow-lg p-8 transition-all duration-300;
+}
+
+.card:hover {
+  @apply shadow-xl transform -translate-y-1;
+}
+
+/* Card Variations */
+.card-sm {
+  @apply p-4;
+}
+
+.card-lg {
+  @apply p-10;
+}
+
+.card-bordered {
+  @apply border border-gray-200;
+}
+
+.card-primary {
+  @apply bg-primary-500 text-white;
+}
+
+.card-secondary {
+  @apply bg-secondary-500 text-white;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white;
+}
+
+/* Card Elements */
+.card-header {
+  @apply mb-6;
+}
+
+.card-title {
+  @apply text-xl font-bold mb-2;
+}
+
+.card-subtitle {
+  @apply text-gray-600 text-sm;
+}
+
+.card-body {
+  @apply mb-6;
+}
+
+.card-footer {
+  @apply mt-auto pt-4 border-t border-gray-100;
+}
+
+/* Card Icon */
+.card-icon {
+  @apply w-12 h-12 rounded-full flex items-center justify-center mb-6;
+}
+
+.card-icon-primary {
+  @apply bg-primary-100 text-primary-500;
+}
+
+.card-icon-secondary {
+  @apply bg-secondary-100 text-secondary-500;
+}
+
+.card-icon-success {
+  @apply bg-green-100 text-green-500;
+}
+
+.card-icon-danger {
+  @apply bg-red-100 text-red-500;
+}
+
+.card-icon-warning {
+  @apply bg-yellow-100 text-yellow-500;
+}
+
+.card-icon-info {
+  @apply bg-blue-100 text-blue-500;
+}
+
+/* Card Layouts */
+.card-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.card-list {
+  @apply space-y-6;
+}
+
+/* Card Interactions */
+.card-clickable {
+  @apply cursor-pointer;
+}
+
+.card-expandable .card-content {
+  @apply max-h-0 overflow-hidden transition-all duration-300;
+}
+
+.card-expandable.expanded .card-content {
+  @apply max-h-screen;
+}
+
+/* Card Media */
+.card-image {
+  @apply rounded-t-lg h-48 w-full object-cover;
+}
+
+.card-image-overlay {
+  @apply relative;
+}
+
+.card-image-overlay .card-content {
+  @apply absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4;
+}
+
+/* Card Pricing */
+.card-pricing {
+  @apply text-center;
+}
+
+.card-pricing-price {
+  @apply text-4xl font-bold my-4;
+}
+
+.card-pricing-period {
+  @apply text-gray-500 text-sm;
+}
+
+.card-pricing-features {
+  @apply my-6 space-y-2 text-left;
+}

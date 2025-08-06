@@ -1,0 +1,69 @@
+/* Button Styles */
+
+.btn {
+  @apply inline-flex items-center justify-center font-semibold transition-all duration-200 rounded-lg;
+}
+
+.btn-sm {
+  @apply px-4 py-2 text-sm;
+}
+
+.btn-md {
+  @apply px-6 py-3 text-base;
+}
+
+.btn-lg {
+  @apply px-8 py-4 text-lg;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-primary-500 to-secondary-500 text-white;
+}
+
+.btn-primary:hover {
+  @apply from-primary-600 to-secondary-600;
+}
+
+.btn-secondary {
+  @apply border-2 border-primary-500 text-primary-500;
+}
+
+.btn-secondary:hover {
+  @apply bg-primary-500 text-white;
+}
+
+.btn-white {
+  @apply bg-white text-primary-600;
+}
+
+.btn-white:hover {
+  @apply bg-gray-100;
+}
+
+.btn-outline-white {
+  @apply border-2 border-white text-white;
+}
+
+.btn-outline-white:hover {
+  @apply bg-white text-primary-600;
+}
+
+.btn-text {
+  @apply text-primary-500 underline;
+}
+
+.btn-text:hover {
+  @apply text-primary-600;
+}
+
+.btn-block {
+  @apply w-full;
+}
+
+.btn-icon {
+  @apply inline-flex items-center;
+}
+
+.btn-icon svg {
+  @apply ml-2 -mr-1 w-4 h-4;
+}
